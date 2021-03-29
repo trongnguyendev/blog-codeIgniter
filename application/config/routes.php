@@ -38,8 +38,16 @@
 |
 */
 
-$route['default_controller'] = "welcome";
+$route['default_controller'] = "";
 $route['404_override'] = '';
+
+$route['posts'] = "posts/index";
+$route['posts/(:any)'] = "posts/view/$1";
+$route['posts-create'] = "posts/create";
+$route['posts-edit/(:any)'] = "posts/edit/$1";
+$route['posts-update/(:any)'] = "posts/update/$1";
+$route['posts-del/(:any)'] = "posts/delete/$1";
+
 
 
 /* End of file routes.php */
